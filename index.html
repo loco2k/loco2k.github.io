@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>loco2k</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -18,12 +19,32 @@
     <span id="rolltext">friend<br/>
     lover<br/>
     and<br/>
-    <span id="spare-time">family</span><br/>
+    <span id="spare-time">  family </span><br/>
     </div>
     </h1>
     
   </div>
-  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script><script  src="./script.js"></script>
+  <div class="wrapper">
+    <div class="typing-demo">
+      从这个页面开始加载，这里就已经开始打字了，所以要保证这一段文字足够长，
+      因为只有足够长它才能在读者划到这里的时候还能看见一点打字特效。
+      也使得我没有白做这一段。
+    </div>
+</div>
 
+<div class="play-music">
+  <div id="music-animation" class="music-animation">
+    <span class="bar bar1"></span>
+    <span class="bar bar2"></span>
+    <span class="bar bar3"></span>
+    <span class="bar bar4"></span>
+    <span class="bar bar5"></span>
+  </div>
+  <div class="music-toggle"><a onClick="togglePlay()" id="toggle" data-text-swap="Music on">Music off</a></div>
+</div>
+<audio id="music" loop="loop" src="./src/罗燕 - 女孩你知道吗.mp3"></audio>
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script><script  src="./script.js"></script>
+  <script src='https://codepen.io/denic/pen/YzyPzKG.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script><script  src="./script.js"></script>
 </body>
 </html>

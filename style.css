@@ -1,3 +1,4 @@
+/*hello部分*/
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
@@ -26,6 +27,8 @@ body {
   align-items: center;
   padding: 0.8rem 1.6rem;
 }
+
+/*滚动字幕部分*/
 * {
   margin:0;
   padding:0;
@@ -96,3 +99,116 @@ h1{
     top: -12.25rem;
   }
 }
+
+/*打字部分*/
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-demo {
+  width: 50ch;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: KaiTi;
+  font-size: 3em;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+/*music dance*/
+
+.play-music {
+  display: flex;
+  position: absolute;
+  left: 50px;
+  z-index: 50;
+  bottom: 50px;
+}
+
+.music-animation {
+  display: flex;
+  margin-right: 10px;
+  align-items: flex-end;
+  position: relative;
+  top: -5px;
+}
+.music-animation.on .bar {
+  -webkit-animation: bar 1.2s infinite;
+          animation: bar 1.2s infinite;
+}
+.music-animation.on .bar2 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.music-animation.on .bar3 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.music-animation.on .bar4 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.music-animation.on .bar5 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.music-toggle {
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+}
+.music-toggle:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 0;
+  background-color: #000;
+  position: absolute;
+  transition: 0.2s;
+}
+.music-toggle:hover:after {
+  width: 100%;
+}
+
+.bar {
+  width: 1px;
+  background-color: #000;
+  height: 2px;
+  display: block;
+  margin: 0 1px;
+}
+
+@-webkit-keyframes bar {
+  0% {
+    height: 4px;
+  }
+  50% {
+    height: 14px;
+  }
+  100% {
+    height: 4px;
+  }
+}
+
+
+
+
+
+
