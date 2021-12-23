@@ -1,10 +1,9 @@
-/*hello部分*/
 body {
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  background-color: rgba(242, 183, 5, 0.3);
-  margin: 0;
+  background-color: #e493d0;
 }
+
+/*hello部分*/
+
 
 .container {
   width: 95vw;
@@ -13,9 +12,11 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  
 }
 .template-footer {
-  position: fixed;
+  
+  position: relative;
   bottom: 0;
   right: 0;
   height: 3rem;
@@ -35,28 +36,112 @@ body {
   font-family: 'Arvo';
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 body{
-  background-color: #ffffba;
+  
+  background-image: 
+    radial-gradient(closest-side, rgb(238,156,167), rgba(235, 105, 78, 0)),
+    radial-gradient(closest-side, rgb(247, 121, 125), rgba(243, 11, 164, 0)),
+    radial-gradient(closest-side, rgb(255,255,186), rgba(254, 234, 131, 0)),
+    radial-gradient(closest-side, rgb(170, 142, 245), rgba(170, 142, 245, 0)),
+    radial-gradient(closest-side, rgb(248, 192, 147), rgba(248, 192, 147, 0));
+  background-size: 
+    130vmax 130vmax,
+    80vmax 80vmax,
+    90vmax 90vmax,
+    110vmax 110vmax,
+    90vmax 90vmax;
+  background-position:
+    -80vmax -80vmax,
+    60vmax -30vmax,
+    10vmax 10vmax,
+    -30vmax -10vmax,
+    50vmax 50vmax;
+  background-repeat: no-repeat;
+  animation: 10s movement linear infinite;
+}
+body::after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
-.main{
-  height:100vh;
-  width:100%;  
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
+
+@keyframes movement {
+  0%, 100% {
+    background-size: 
+      130vmax 130vmax,
+      80vmax 80vmax,
+      90vmax 90vmax,
+      110vmax 110vmax,
+      90vmax 90vmax;
+    background-position:
+      -80vmax -80vmax,
+      60vmax -30vmax,
+      10vmax 10vmax,
+      -30vmax -10vmax,
+      50vmax 50vmax;
+  }
+  25% {
+    background-size: 
+      100vmax 100vmax,
+      90vmax 90vmax,
+      100vmax 100vmax,
+      90vmax 90vmax,
+      60vmax 60vmax;
+    background-position:
+      -60vmax -90vmax,
+      50vmax -40vmax,
+      0vmax -20vmax,
+      -40vmax -20vmax,
+      40vmax 60vmax;
+  }
+  50% {
+    background-size: 
+      80vmax 80vmax,
+      110vmax 110vmax,
+      80vmax 80vmax,
+      60vmax 60vmax,
+      80vmax 80vmax;
+    background-position:
+      -50vmax -70vmax,
+      40vmax -30vmax,
+      10vmax 0vmax,
+      20vmax 10vmax,
+      30vmax 70vmax;
+  }
+  75% {
+    background-size: 
+      90vmax 90vmax,
+      90vmax 90vmax,
+      100vmax 100vmax,
+      90vmax 90vmax,
+      70vmax 70vmax;
+    background-position:
+      -50vmax -40vmax,
+      50vmax -30vmax,
+      20vmax 0vmax,
+      -10vmax 10vmax,
+      40vmax 60vmax;
+  }
 }
+
 h1{
   text-align:center;
   text-transform: uppercase;
   color: #FFCAB1; 
-  font-size: 4rem;
+  font-size: 8rem;
 }
 
 .roller{
-  height: 4.125rem;
-  line-height: 4rem;
+  height: 8.25rem;
+  line-height: 8rem;
   position: relative;
   overflow: hidden; 
   width: 100%;
@@ -69,9 +154,9 @@ h1{
 
 
 #spare-time{
-  font-size: 1rem;
+  font-size: 8rem;
   font-style: italic;
-  letter-spacing: 1rem;
+  letter-spacing: 2rem;
   margin-top: 0;
   color: #F78764;
   
@@ -90,44 +175,66 @@ h1{
     top:0;
   }
   25%{
-    top: -4rem;    
+    top: -8rem;    
   }
   50%{
-    top: -8rem;
+    top: -16rem;
   }
   72.5%{
-    top: -12.25rem;
+    top: -25rem;
   }
 }
 
 /*打字部分*/
-.wrapper {
-  height: 100vh;
-  /*This part is important for centering*/
+:root{
+  font-size: 20px;
+}
+#typing {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.typing-demo {
-  width: 50ch;
-  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: KaiTi;
-  font-size: 3em;
+h2 {
+  font-size: 6rem;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  position: relative;
+ } 
+
+
+
+h2.ended::after {
+  animation: 1.1s cursor steps(2, jump-none) infinite;
 }
 
-@keyframes typing {
+@keyframes cursor {
   from {
-    width: 0
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
-    
-@keyframes blink {
-  50% {
-    border-color: transparent
+
+h2 span {
+  --delay: 10s;
+  
+  display: inline-block;
+  overflow: hidden;
+  width: 0ch;
+  animation: 0.1s text-in ease-in-out forwards;
+  animation-delay: var(--delay);
+}
+
+@keyframes text-in {
+  from {
+    width: 0ch;
+  }
+  to {
+    width: 1ch;
   }
 }
 
@@ -138,7 +245,7 @@ h1{
   position: absolute;
   left: 50px;
   z-index: 50;
-  bottom: 50px;
+  top: 50px;
 }
 
 .music-animation {
@@ -171,7 +278,7 @@ h1{
 
 .music-toggle {
   cursor: pointer;
-  font-size: 20px;
+  font-size: 37px;
   position: relative;
 }
 .music-toggle:after {
@@ -188,7 +295,7 @@ h1{
 }
 
 .bar {
-  width: 1px;
+  width: 3px;
   background-color: #000;
   height: 2px;
   display: block;
@@ -200,14 +307,53 @@ h1{
     height: 4px;
   }
   50% {
-    height: 14px;
+    height: 23px;
   }
   100% {
     height: 4px;
   }
 }
 
+.background {
+            background-image: url("暮色梯田.jpg");
+            background-size: cover;
+            background-position: 50% 50%;
+            height: 200vh;
+            font: 900 39rem '';
+            line-height: 130vh;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
 
+        .background::before {
+            content: '';
+            background-size: cover;
+            background-image: inherit;
+            background-position: 50% 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: -99;
+        }
+
+        
+        h2 {
+            position: absolute;
+            letter-spacing: 2px;
+            top: 120vh;
+            width: 60%;
+            color: #fff;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 30px;
+            background-color: rgba(0, 0, 0, .3);
+        }
 
 
 

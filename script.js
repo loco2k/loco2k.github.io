@@ -49,3 +49,5 @@ button.addEventListener('click', function() {
     button.innerHTML = button.getAttribute("data-text-swap");
   }
 }, false);
+
+const h2 = document
