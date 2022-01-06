@@ -96,94 +96,6 @@ body::after {
       40vmax 60vmax;
   }
 }
-/*hello部分*/
-
-
-.container {
-  width: 95vw;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  
-}
-.template-footer {
-  
-  position: relative;
-  bottom: 0;
-  right: 0;
-  height: 3rem;
-  width: 18rem;
-  border-radius: 5px 0 0 0;
-  background-color: #ffffba;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.8rem 1.6rem;
-}
-
-/*滚动字幕部分*/
-* {
-  margin:0;
-  padding:0;
-
-}
-
-
-
-h1{
-  text-align:center;
-  text-transform: uppercase;
-  color: #FFCAB1; 
-  font-size: 8rem;
-}
-
-.roller{
-  height: 8.25rem;
-  line-height: 8rem;
-  position: relative;
-  overflow: hidden; 
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #119DA4;
-}
-
-
-#spare-time{
-  font-size: 8rem;
-  font-style: italic;
-  letter-spacing: 2rem;
-  margin-top: 0;
-  color: #F78764;
-  
-  
-  
-}
-
-.roller #rolltext {
-  position: absolute;
-  top: 0;
-  animation: slide 5s infinite;  
-}
-
-@keyframes slide {
-  0%{
-    top:0;
-  }
-  25%{
-    top: -8rem;    
-  }
-  50%{
-    top: -16rem;
-  }
-  72.5%{
-    top: -25rem;
-  }
-}
-
 
 /*music dance*/
 
@@ -201,6 +113,7 @@ h1{
   align-items: flex-end;
   position: relative;
   top: -5px;
+  
 }
 .music-animation.on .bar {
   -webkit-animation: bar 1.2s infinite;
@@ -260,3 +173,120 @@ h1{
     height: 4px;
   }
 }
+
+/*生快动画*/
+.ml15 {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  position: absolute;
+  margin-top: 30vh;
+  width: 100%;
+  text-align: center;
+  font-size: 666%;
+  font-family: "STKaiti";
+  color: white;
+  
+}
+
+.ml15 .word {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml6 {
+  position: absolute;
+  font-weight: 900;
+  font-size: 3.3em;
+  color: #f7797d;
+}
+
+.ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 8em;
+  padding-left: 50rem;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml6 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+/*彩带*/
+canvas {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+}
+
+/*滚动字幕部分*/
+* {
+  margin:0;
+  padding:0;
+  
+}
+
+.main{
+  height:100vh;
+  width:100%;  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+h3{
+  text-align:center;
+  text-transform: uppercase;
+  color: #FFCAB1; 
+  font-size: 8rem;
+}
+
+.roller{
+  height: 8.25rem;
+  line-height: 8rem;
+  position: relative;
+  overflow: hidden; 
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #119DA4;
+}
+
+
+#spare-time{
+  font-size: 8rem;
+  font-style: italic;
+  letter-spacing: 2rem;
+  margin-top: 0;
+  color: #F78764;
+  
+  
+  
+}
+
+.roller #rolltext {
+  position: absolute;
+  top: 0;
+  animation: slide 5s infinite;  
+}
+
+@keyframes slide {
+  0%{
+    top:0;
+  }
+  25%{
+    top: -8rem;    
+  }
+  50%{
+    top: -16rem;
+  }
+  72.5%{
+    top: -25rem;
+  }
+}
+
