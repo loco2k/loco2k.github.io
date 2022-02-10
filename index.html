@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Link21</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+  <audio id="music" loop="loop" src="src/Marcela - Loving You.mp3"></audio>
+<div class="play-music">
+    <div id="music-animation" class="music-animation">
+      <span class="bar bar1"></span>
+      <span class="bar bar2"></span>
+      <span class="bar bar3"></span>
+      <span class="bar bar4"></span>
+      <span class="bar bar5"></span>
+    </div>
+    <div class="music-toggle"><a onClick="togglePlay()" id="toggle" data-text-swap="Music on">Music off</a></div>
+  </div>
+
+  <h7 class="ml15">
+    <span class="word">生日</span>
+    <span class="word">快乐</span>
+  </h7>
+  
+  <h2 class="ml6">
+    <span class="text-wrapper">
+      <span class="letters">淋淋小宝贝</span>
+    </span>
+  </h2>
+
+    <!-- 彩带背景 -->
+  <canvas id="canvas"></canvas>
+  
+  <div class="main">
+    <h3>尚才淋对我而言: <div class="roller">
+      <span id="rolltext">朋友<br/>
+      爱人<br/>
+      和<br/>
+      <span id="spare-time"> 家人 </span><br/>
+      </div>
+    </h3>   
+  </div>
+
+  <div class="shell2">
+    <div class="content">
+        <h4>下滑开启你21岁的回忆<br />︾</h4>
+    </div>
+</div>
+
+    <div class="shell">
+      <div class="image" style="background-image: url('./src/2.18枣庄.jpg');"></div>
+      <div class="heading">
+          <h1>2.18 台儿庄</h1>
+      </div>
+      <div class="text">
+          <h1>坐上客车一起旅行，在一个极好的天气，
+            <br>
+            我们来到了台儿庄古城，景色非常出片。
+            <br>
+            我变身淋淋摄影师，陪你走过昏暗废弃小道。
+            <br>
+            穿过花灯与石桥，度过了一个奇妙的夜晚。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/2.28\ 泡温泉.jpg');"></div>
+      <div class="heading">
+          <h1>2.28 泡温泉</h1>
+      </div>
+      <div class="text">
+        <h1>抓住寒假的小尾巴，我们去体验一把温泉旅行。
+          <br>
+          人生第一次住进了别墅，完成并录制了倒放挑战。
+          <br>
+          经过我们执着探索，发现了众多神奇功效的温泉。
+          <br>
+          早餐自助一般，但我们都很享受巡逻车接送的过程。
+        </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/3.20小红花.jpg');"></div>
+      <div class="heading">
+          <h1>3.20 小红花</h1>
+      </div>
+      <div class="text">
+          <h1>昨晚你急匆匆地来，今天你又急匆匆地走了。
+            <br>
+            人生不如意十有八九，我承诺的景点并未逛完。
+            <br>
+            但小红花的出现拉近了你与梦想的距离。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/4.2-4.6青岛之旅.jpg');"></div>
+      <div class="heading">
+          <h1>4.2-4.6 青岛之旅</h1>
+      </div>
+      <div class="text">
+          <h1>似乎是为了一雪前耻，不服气的你在清明之际，
+            <br>
+            又来到了青岛。这次我们的足迹遍布青岛四个大区。
+            <br>
+            景色宜人的街道，舒适的小复式，惬意的麦岛阳光。
+            <br>
+            当然还有失败的极限挑战和意外延长的欢乐时光。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/5.1-5.4日落之前（如夕阳般的短暂相聚）.jpg');"></div>
+      <div class="heading">
+          <h1>5.1-5.4 日落之前</h1>
+      </div>
+      <div class="text">
+          <h1>五一劳动节，那咱得回家劳动劳动。
+            <br>
+            结果我真的劳动了，假期首日在家做课设。
+            <br>
+            相聚攒到了最后一天，我们去公园的树下野餐。
+            <br>
+            我们四处兜兜转转，夕阳落下，也舍不得回家。
+            <br>
+            我们嬉笑，拉着手转圈，创造着难忘的回忆。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/7.9暑假开始（暑假前的方特之行）.jpg');"></div>
+      <div class="heading">
+          <h1>7.9 暑假开始</h1>
+      </div>
+      <div class="text">
+          <h1>我们的重逢却是发生在这天以前，你迫不及待地来到青岛找我。
+            <br>
+            信息楼的加时会让我心急如焚，你伪装成学生和我一起走出校门。
+            <br>
+            你一来我的人生仿佛就切换成了电影模式，这会儿是谍战片。
+            <br>
+            第二天我们如愿去了方特，可惜我的脑门和天气一样热。
+            <br>
+            你把我这个病号照顾的是更进一步了，好在我意志坚定。
+            <br>
+            现在我正坐在去见你的火车上，幻想着属于我们的夏天。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/7.19围棋（开始了半同居生活）.jpg');"></div>
+      <div class="heading">
+          <h1>7.19 围棋</h1>
+      </div>
+      <div class="text">
+          <h1>咱俩在围棋领域的第一次博弈，我执白，“险胜”。
+            <br>
+            由棋盘摆放的位置可以管中窥豹，你已是我床的常客。
+            <br>
+            你在这眠了很多白日梦。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/7.22代表和好的向日葵.jpg');"></div>
+      <div class="heading">
+          <h1>7.22 代表和好的向日葵</h1>
+      </div>
+      <div class="text">
+          <h1>这个夏天出乎了我们俩人的意料，可以说是猛料不断。
+            <br>
+            放不下的往事，总是暗中推动着下一次的冲突。
+            <br>
+            吵吵闹闹中我们形成了“先争吵后妥协”的一种模式。
+            <br>
+            你喜欢的向日葵提醒着我们去注意拥有彼此的美好。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/7.23微醺.jpg');"></div>
+      <div class="heading">
+          <h1>7.23 微醺</h1>
+      </div>
+      <div class="text">
+        <h1>“寇海鹏明年我请你喝酒”
+          <br>
+          本以为的一句戏言，却经历了3次反转。
+          <br>
+          酒不好喝，好在我们都享受微醺的状态。
+          <br>
+          
+        </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/7.29活力少女\ 阴天里的一抹暖阳.jpg');"></div>
+      <div class="heading">
+          <h1>7.29 活力少女</h1>
+      </div>
+      <div class="text">
+          <h1>在你喜欢的天气捕捉到了你的灵动，
+            <br>
+            你就像是阴天里的一抹暖阳，
+            <br>
+            让见到人不经感叹自己的幸运。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/8.1过生日就得疯狂一点.jpg');"></div>
+      <div class="heading">
+          <h1>8.1 过生日就得疯狂一点</h1>
+      </div>
+      <div class="text">
+          <h1>今天我过生日啊，
+            <br>
+            大家敞开肚皮吃，
+            <br>
+            我先吃为敬。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/8.3-8.6又到青岛.jpg');"></div>
+      <div class="heading">
+          <h1>8.3-8.6 又到青岛</h1>
+      </div>
+      <div class="text">
+        <h1>你和我一起在青岛一天到晚吃吃喝喝的疯玩。
+          <br>
+          遇到了小床的超大号媳妇，栖悦顶发现了摆拍地。
+          <br>
+          下雨被困小吃街，和可爱又安静的柴犬一起躲雨。
+          <br>
+          临走时又被快手主播追赶，呼~ 真是惊险。
+        </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/8.8咖啡厅的豪横美女.jpg');"></div>
+      <div class="heading">
+          <h1>8.8 咖啡厅的豪横美女</h1>
+      </div>
+      <div class="text">
+        <h1>啊？你问我后面的车怎么开进来的。
+          <br>
+          俩保镖给抗进来的呗，姐讲究排场。
+         
+        </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/8.9那么热的野餐.jpg');"></div>
+      <div class="heading">
+          <h1>8.9 那么热的野餐</h1>
+      </div>
+      <div class="text">
+          <h1>河边搭一帐篷，能出一T恤的汗。
+            <br>
+            后来你都被热得脱了衣服，真是大胆。
+            <br>
+            拍立得过曝了，却给人一种仙女的感觉。
+            <br>
+            你通红的笑脸很是上镜。太热了，去车里。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/8.14七夕的花花会大些.jpg');"></div>
+      <div class="heading">
+          <h1>8.14 七夕的花花会大些</h1>
+      </div>
+      <div class="text">
+          <h1>七夕啦，相爱的人自然要见面。
+            <br>
+            我抱着花在站牌后面等你
+            <br>
+            想象着过会儿你高兴的表情。
+            <br>
+            果然给你惊喜是最快乐的事情。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/8.17驾驶刺激声光电车车.jpg');"></div>
+      <div class="heading">
+          <h1>8.17 驾驶刺激声光电车车</h1>
+      </div>
+      <div class="text">
+          <h1>我们一家去书法广场消食，
+            <br>
+            本要给妹妹租的玩具车，
+            <br>
+            我们俩玩的不亦乐乎。
+            <br>
+            加速~ 加速~
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/8.27-9.4叒叕到青岛.jpg');"></div>
+      <div class="heading">
+          <h1>8.27-9.4 叒叕到青岛</h1>
+      </div>
+      <div class="text">
+          <h1>这个表情的你仿佛在说，嘿嘿，俺又来了。
+            <br>
+            我陪你打了人生中的第一对耳洞（有来生的）
+            <br>
+            发现了好吃的腌鲅鱼。真的是很好吃。
+            <br>
+            你惊讶我很会放风筝，我以为是基本技能。
+            <br>
+            白天疯玩，晚上继续，狼人杀入了迷。
+            <br>
+            这次来青，是暑假的意犹未尽。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/9.17-9.22中秋短聚.jpg');"></div>
+      <div class="heading">
+          <h1>9.17-9.22 中秋短聚</h1>
+      </div>
+      <div class="text">
+          <h1>
+            <br>
+            中秋聚吗，得聚。今年讲究一把送些礼。
+            <br>
+            没想到你也有准备惊喜，我收到了同款耳机。
+            <br>
+            到了返校日，舍不得，再陪你一晚吧。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/9.27-10.4给自己放个假.jpg');"></div>
+      <div class="heading">
+          <h1>9.27-10.4 给自己放个假</h1>
+      </div>
+      <div class="text">
+        <h1>相思总是太磨人，听说国庆被取消，我决定得带你野一把。
+          <br>
+          简单地制定了一个计划，背着老师给自己放七天假。去上海。
+          <br>
+          谁知飞机落地没多久就赶上班主任开会，但也浪子难回头了。
+          <br>
+          计划照旧，今天去市区玩玩，晚上养足精神明天要去迪士尼啦。
+        </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/9.29从早玩到晚的迪士尼.jpg');"></div>
+      <div class="heading">
+          <h1>9.29 从早玩到晚的迪士尼</h1>
+      </div>
+      <div class="text">
+        <h1>送你回家啦，就是纳闷为什么公主还要排队。
+          <br>
+          估计是为了和我在一起不得已而隐藏身份吧。
+          <br>
+          我们运气好是淡季，不仅把想玩的项目玩遍。
+          <br>
+          还能把喜欢的反复刷，更是解锁了家庭卫生间~
+        </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/9.30苏州的天.jpg');"></div>
+      <div class="heading">
+          <h1>9.30 苏州的天</h1>
+      </div>
+      <div class="text">
+          <h1>经历了上海的快节奏和迪士尼的疯狂，我们来到了苏州。
+            <br>
+             一座充满历史文化底蕴，同时生活节奏慢得多的城市。
+            <br>
+             这儿有会开玩笑的奶奶和好客的老板，温和的苏式建筑。
+            <br>
+            临走前还体验了一把双人成行，就算超时了也没关系。
+            <br>
+             苏州真是迷人，经此一行，我们俩被她深深地迷住了。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/12.31跨年.jpg');"></div>
+      <div class="heading">
+          <h1>12.31 跨年</h1>
+      </div>
+      <div class="text">
+          <h1>放假啦~放假啦~寒假啊，我们可把你给盼来了。
+            <br>
+            你懂我心思，我昨天回来，今天你就住进我家。
+            <br>
+            一起跨阳历年啦，我们有Netflix，有果盘，
+            <br>
+            有彼此。
+          </h1>
+      </div>
+
+      <div class="image" style="background-image: url('./src/2022.1.8灯光大师.jpg');"></div>
+      <div class="heading">
+          <h1>2022.1.8 彼此温暖</h1>
+      </div>
+      <div class="text">
+        <h1>在你的21这一岁，我们抓住了一切能见面的机会去制造重逢，因为它
+          <br>
+            实在是太令人着迷了。我们不计后果地欢笑着、撕心裂肺地吵闹着、
+          <br>
+            热泪盈眶地感动着。你说，玲珑骰子安红豆，入骨相思知不知。
+          <br>
+            你还说，两年内要解决异地问题。那就是说到你的23岁生日的时候，
+          <br>
+            我就得在暗地里给你准备惊喜了。未来可期，但更重要是的把握当下。
+          <br>
+            和我一起热热闹闹地活着吧，陪在我身边过我们想过的日子。
+        </h1>
+      </div>
+    </div>
+  
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+  <script src='https://unpkg.co/gsap@3/dist/gsap.min.js'></script>
+  
+</body>
+</html>
